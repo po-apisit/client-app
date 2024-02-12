@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import '@fontsource/roboto/700.css';
+import HeaderPost from "./navbar/HeaderPost";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <HeaderPost />
+            {children}
+        </body>
     </html>
   );
 }
