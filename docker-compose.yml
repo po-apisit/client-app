@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"  # ประกาศพอร์ต 3000 บน Docker host และเชื่อมต่อกับพอร์ต 80 ภายใน container
+    volumes:
+      - .:/app  # ให้ Docker ติดตามการเปลี่ยนแปลงในโค้ดของเรา
