@@ -4,6 +4,7 @@ import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import AddBusinessIcon from '@mui/icons-material/AddBusiness';
+import GroupsIcon from '@mui/icons-material/Groups';
 
 type Props = {
     online:boolean
@@ -37,6 +38,12 @@ export default function FavoriteAsidebarComponent({online}: Props) {
                     <AddBusinessIcon />
                 </ListItemIcon>
                 <ListItemText primary={"Company"} />
+            </ListItemButton>
+            <ListItemButton disabled={!online} >
+                <ListItemIcon>
+                    <GroupsIcon />
+                </ListItemIcon>
+                <ListItemText primary={"Group campping"} />
             </ListItemButton>
         </List>
     </React.Fragment>

@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: Props,
  
 
   return {
-    title: "Thai-camps : "+params.slug ,
+    title: "Thai-camps : "+ params.slug ,
     keywords:"thaicamp, แคมปิ้้ง,"
 
   }

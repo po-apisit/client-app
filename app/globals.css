@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Themietlorfreeversion-Regular';
+    src: url('./Themietlorfreeversion-Regular.ttf') format('truetype');
+  }

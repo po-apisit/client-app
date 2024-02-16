@@ -6,7 +6,7 @@ type Props = {}
 
 export default function MainContentComponent({}: Props) {
   return (
-    <Grid item md={12} lg={7}>
+    <Grid item md={5} lg={5} xs={12} >
       <Stack direction={"column"} justifyContent={"flex-start"} alignItems={"center"} spacing={2} sx={{ width:"100%" }} >
         <PostContentComponent />
       </Stack>

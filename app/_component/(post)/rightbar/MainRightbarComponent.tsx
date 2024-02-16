@@ -7,7 +7,7 @@ type Props = {}
 
 export default function MainRightbarComponent({}: Props) {
   return (
-    <Grid item md={12} lg={3} >
+    <Grid item md={4} lg={4} xs={12} >
         <SearchMainRightbarComponent />
         <RecommendRightbarComponent />
     </Grid>

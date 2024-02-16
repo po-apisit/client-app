@@ -10,7 +10,7 @@ export default function MainAsidebarComponent({}: Props) {
   const online = false;
 
   return (
-    <Grid item md={12} lg={2} >
+    <Grid item md={3} lg={3} xs={12} >
         <ProfileAsidebarComponent online={online} />
         <FavoriteAsidebarComponent online={online} />
     </Grid>
