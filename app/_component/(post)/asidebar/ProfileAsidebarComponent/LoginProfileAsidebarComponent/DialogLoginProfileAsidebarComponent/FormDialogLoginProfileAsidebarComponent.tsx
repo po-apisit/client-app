@@ -79,14 +79,6 @@ export default function FormDialogLoginProfileAsidebarComponent({}: Props) {
 
       <Divider>OR</Divider>
 
-      <Button
-        variant="outlined"
-        color="primary"
-        className=" items-center "
-        startIcon={<img src="/icons8-google.svg" alt="Google Icon" />} // ใช้ MUI Icon และกำหนด viewBox สำหรับ SVG
-      >
-        เข้าสู่ระบบด้วย Gmail
-      </Button>
     </React.Fragment>
   );
 }
