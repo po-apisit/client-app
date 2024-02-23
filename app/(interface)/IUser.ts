@@ -1,8 +1,8 @@
 export interface IUser {
-    ID_USER?:string,
-    FIRST_NAME?:string,
-    USERNAME?:string,
-    PASSWORD?:string,
+    nickname?:string,
+    name?:string,
+    picture?:string,
+    updated_at?:string,
     LAST_NAME?:string,
     EMAIL?:string,
 }

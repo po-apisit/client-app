@@ -9,7 +9,7 @@ type Props = {
     card: ICardRecommend
 }
 
-export default function CardContentRecommendRightbarComponent({card, }: Props) {
+export default function CardContentRecommendRightbarComponent({card }: Props) {
   return (
     <CardContent>
     <Stack

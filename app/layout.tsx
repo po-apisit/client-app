@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import '@fontsource/roboto/700.css';
 import StoreProvider from "./_component/StoreProvider";
+import { UserProvider } from '@auth0/nextjs-auth0/client';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,11 +19,14 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
       <head>
         <link rel="stylesheet" href="./Themietlorfreeversion-Regular.ttf" />
       </head>
-      <body className={inter.className}>
+      <UserProvider>
+        <body className={inter.className}>
           <StoreProvider>
             {children}
           </StoreProvider>
         </body>
+      </UserProvider>
+
     </html>
   );
 }

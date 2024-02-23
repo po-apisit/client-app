@@ -1,24 +1,21 @@
 'use client'
-import { ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
-import React, { useState } from "react";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import DialogLoginProfileAsidebarComponent from "./LoginProfileAsidebarComponent/DialogLoginProfileAsidebarComponent";
+import React from 'react'
+import NoLoginProfileAsidebarComponent from './LoginProfileAsidebarComponent/NoLoginProfileAsidebarComponent'
+import IsLoginProfileAsidebarComponent from './LoginProfileAsidebarComponent/IsLoginProfileAsidebarComponent'
+import { useUser } from '@auth0/nextjs-auth0/client'
 
-type Props = {};
+type Props = {}
 
 export default function LoginProfileAsidebarComponent({}: Props) {
+  const { user, error, isLoading }:any = useUser();
 
-  const [open, setOpen] = useState(false);
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>{error.message}</div>;
 
   return (
-    <React.Fragment>
-      <ListItemButton onClick={() => setOpen(!open) } >
-        <ListItemIcon>
-          <AccountCircleIcon />
-        </ListItemIcon>
-        <ListItemText primary="login" />
-      </ListItemButton>
-      <DialogLoginProfileAsidebarComponent open={open} setOpen={setOpen} />
-    </React.Fragment>
-  );
+    <div>
+      { !user && <NoLoginProfileAsidebarComponent /> }
+      {user && <IsLoginProfileAsidebarComponent />}
+    </div>
+  )
 }
