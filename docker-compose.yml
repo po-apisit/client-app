@@ -5,5 +5,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    environment:
+      - URL_SERVER: http://212.80.215.208:122
+      - GOOGLE_CLIENT_ID: 780869232519-d0hs8afe1hq3h5rg92d6eavgc3skliut.apps.googleusercontent.com
+      - GOOGLE_CLIENT_SECRTE: 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
     ports:
       - "3000:3000"  # ประกาศพอร์ต 3000 บน Docker host และเชื่อมต่อกับพอร์ต 80 ภายใน container

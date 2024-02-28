@@ -10,16 +10,8 @@ interface User {
     meserror: string | null;
 }
 
-const initialState : User = {
-    data: {
-        ID_USER: "",
-        FIRST_NAME: "",
-        LAST_NAME: "",
-        EMAIL: ""},
-    loadding: false,
-    login: false,
-    error: false,
-    meserror: null
+const initialState = {
+
 }
 
 const authenSlice = createSlice({
@@ -27,33 +19,13 @@ const authenSlice = createSlice({
     initialState,
     reducers:{
         fetchingLoginPending: (state) => {
-            state.loadding = true;
-            state.login = false;
-            state.error = false;
-            state.data = {
-                        ID_USER: "",
-                        FIRST_NAME: "",
-                        LAST_NAME: "",
-                        EMAIL: ""};
-            state.meserror = null;
+
         },
         fetchingLoinSuccess: (state, action: PayloadAction<IUser>) => {
-            state.data = action.payload;
-            state.error = false;
-            state.loadding = false;
-            state.login = true;
-            state.meserror = null;
+
         },
         fetchingLoginFail: (state, action: PayloadAction<string>) => {
-            state.data = {
-                ID_USER: "",
-                FIRST_NAME: "",
-                LAST_NAME: "",
-                EMAIL: ""};
-            state.login = false;
-            state.error = true;
-            state.meserror = action.payload,
-            state.loadding = false;
+
         }
     }
 })
